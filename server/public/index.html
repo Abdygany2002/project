@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма паспортных данных</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="passportForm" novalidate>
+        <h2>Заполните паспортные данные</h2>
+
+        <label for="lastName">Фамилия:</label>
+        <input type="text" id="lastName" required>
+        <span class="error-message" id="lastNameError"></span>
+
+        <label for="firstName">Имя:</label>
+        <input type="text" id="firstName" required>
+        <span class="error-message" id="firstNameError"></span>
+
+        <label for="middleName">Отчество:</label>
+        <input type="text" id="middleName" required>
+        <span class="error-message" id="middleNameError"></span>
+
+        <label for="birthDate">Дата рождения:</label>
+        <input type="date" id="birthDate" required>
+        <span class="error-message" id="birthDateError"></span>
+
+        <label for="gender">Пол:</label>
+        <select id="gender" required>
+            <option value="" disabled selected>Выберите пол</option>
+            <option value="male">Мужской</option>
+            <option value="female">Женский</option>
+        </select>
+        <span class="error-message" id="genderError"></span>
+
+        <label for="passportNumber">Серия и номер паспорта:</label>
+        <input type="text" id="passportNumber" placeholder="1234 567890" required>
+        <span class="error-message" id="passportNumberError"></span>
+
+        <label for="issueDate">Дата выдачи:</label>
+        <input type="date" id="issueDate" required>
+        <span class="error-message" id="issueDateError"></span>
+
+        <label for="divisionCode">Код подразделения:</label>
+        <input type="text" id="divisionCode" placeholder="000-000" required>
+        <span class="error-message" id="divisionCodeError"></span>
+
+        <label for="issuedBy">Кем выдан:</label>
+        <input type="text" id="issuedBy" required>
+        <span class="error-message" id="issuedByError"></span>
+
+        <label for="registrationAddress">Адрес регистрации:</label>
+        <input type="text" id="registrationAddress" required>
+        <span class="error-message" id="registrationAddressError"></span>
+
+        <label for="phoneNumber">Мобильный номер телефона:</label>
+        <input type="tel" id="phoneNumber" placeholder="+79001234567" required>
+        <span class="error-message" id="phoneNumberError"></span>
+
+
+        <label for="email">Электронный адрес:</label>
+        <input type="email" id="email" placeholder="example@mail.com" required>
+        <span class="error-message" id="emailError"></span>
+
+        <button type="button" id="submitButton">Отправить</button>
+        <span class="success-message" id="successMessage"></span>
+    </form>
+
+        <div id="successMessage" class="success-message" style="display: none; color: green; margin-top: 10px;"></div>
+        <div id="errorMessage" class="error-message" style="display: none; color: red; margin-top: 10px;"></div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
